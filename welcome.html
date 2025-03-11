@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Page</title>
+    <style>
+      /* Reset default styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Page background and centering */
+      body {
+        min-height: 100vh;
+        background-color: #1b1b1b;
+        font-family: Arial, sans-serif;
+        color: #ffffff;
+        padding: 2rem;
+      }
+
+      /* Container styling */
+      .welcome-container {
+        background-color: #262626;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      .welcome-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #444444;
+      }
+
+      .welcome-header h2 {
+        font-size: 1.8rem;
+        color: #ffffff;
+      }
+
+      .user-info {
+        background-color: #333333;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+      }
+
+      .info-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #444444;
+      }
+
+      .info-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .info-label {
+        color: #aaaaaa;
+      }
+
+      .info-value {
+        color: #ff7b25;
+      }
+
+      /* Text editor styling */
+      .editor-container {
+        background-color: #333333;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .editor-toolbar {
+        background-color: #222222;
+        padding: 0.75rem;
+        border-bottom: 1px solid #444444;
+      }
+
+      .editor-area {
+        width: 100%;
+        min-height: 300px;
+        padding: 1rem;
+        background-color: #333333;
+        border: none;
+        color: #ffffff;
+        font-family: "Courier New", Courier, monospace;
+        resize: vertical;
+      }
+
+      .editor-area:focus {
+        outline: none;
+      }
+
+      /* Button styling */
+      .button {
+        padding: 0.5rem 1rem;
+        background-color: #ff7b25;
+        border: none;
+        border-radius: 4px;
+        color: #ffffff;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .button:hover {
+        background-color: #ffa94d;
+      }
+
+      /* Logout link */
+      .logout-link {
+        color: #aaaaaa;
+        text-decoration: none;
+        font-size: 0.9rem;
+      }
+
+      .logout-link:hover {
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="welcome-container">
+      <div class="welcome-header">
+        <h2>Welcome, Микита Дубина ДУІКТ!</h2>
+      </div>
+
+      <div class="user-info">
+        <div class="info-item">
+          <span class="info-label">Username:</span>
+          <span class="info-value">NikL</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Age:</span>
+          <span class="info-value">22</span>
+        </div>
+        <div class="info-item">
+          <span class="info-label">Current Time:</span>
+          <span id="current-time" class="info-value">18:30:13</span>
+        </div>
+      </div>
+
+      <div class="editor-container">
+        <div class="editor-toolbar">
+          <button class="button">Save</button>
+        </div>
+        <textarea
+          class="editor-area"
+          placeholder="Start typing here..."
+        ></textarea>
+      </div>
+    </div>
+    <script src="welcome.js"></script>
+  </body>
+</html>
